@@ -49,7 +49,7 @@ class SettingsScreen extends StatelessWidget {
             trailing: IconButton(
               icon: const Icon(Icons.exit_to_app),
               onPressed: () {
-                // Çıkış yapma işlemi gelecek
+                // Çıkış yapma işlemi olacak
               },
             ),
           ),
