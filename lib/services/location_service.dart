@@ -5,11 +5,11 @@ class LocationService {
     bool serviceEnabled;
     LocationPermission permission;
 
-    // Servis açık mı?
+   
     serviceEnabled = await Geolocator.isLocationServiceEnabled();
     if (!serviceEnabled) return null;
 
-    // İzin kontrolü
+   
     permission = await Geolocator.checkPermission();
     if (permission == LocationPermission.denied) {
       permission = await Geolocator.requestPermission();
@@ -18,7 +18,7 @@ class LocationService {
 
     if (permission == LocationPermission.deniedForever) return null;
 
-    // Konumu al
+    
     return await Geolocator.getCurrentPosition(
       desiredAccuracy: LocationAccuracy.high,
     );
